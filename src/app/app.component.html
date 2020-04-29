@@ -3,7 +3,7 @@
     <div class="col-6 mx-auto mt-5 p-3 bg-light border border-info">
       <form [formGroup]="infoForm" (ngSubmit)="sendMail()" #form="ngForm">
         <label for="nameInp"></label>
-        <input type="text" id="nameInp" class="form-control border-info" formControlName="name">
+        <input type="text" id="nameInp" placeholder="name" class="form-control border-info" formControlName="name">
 
         <div *ngIf="name.invalid && (name.dirty || name.touched)"
              class="alert alert-danger p-1">
@@ -17,7 +17,7 @@
         </div>
 
         <label for="mailInp"></label>
-        <input type="text" id="mailInp" class="form-control border-info" formControlName="email">
+        <input type="text" id="mailInp" placeholder="email" class="form-control border-info" formControlName="email">
 
         <div *ngIf="email.invalid && (email.dirty || email.touched)"
              class="alert alert-danger p-1">
